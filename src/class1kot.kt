@@ -2,21 +2,20 @@ import java.util.*
 
 fun main(){
 
-    var num1:Int
-    var num2:Int
-    var func:String
     val input = Scanner(System.`in`)
     print("Enter first no. : ")
-    num1 = input.nextInt()
+    val num1= input.nextFloat()
     print("Enter second no. : ")
-    num2 = input.nextInt()
-    print("Enter the operator : \n1.Addition(+)\n2.Subtraction(-)\n3.Multiplication(*)\n4.Division(/)\n5.Modulus(%)\n")
-    func = input.next()
-    when(func){
-        "+" -> print(num1+num2)
-        "-" -> print(num1-num2)
-        "*" -> print(num1*num2)
-        "/" -> print(num1.toFloat()/num2.toFloat())
-        "%" -> print(num1%num2)
+    val num2= input.nextFloat()
+    print("Enter the operator (+,-,*,/,%) : ")
+    val func: String = input.next()
+    val result: Float = when(func){
+        "+" -> num1+num2
+        "-" -> num1-num2
+        "*" -> num1*num2
+        "/" -> num1/num2
+        "%" -> num1%num2
+        else -> 0.0f
     }
+    print("$num1 $func $num2 = $result")
 }
