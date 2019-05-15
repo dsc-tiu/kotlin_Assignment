@@ -10,14 +10,19 @@ fun main(){
     val a = reader.nextFloat()
     val b = reader.nextFloat()
 
+    var add = {x:Float,y:Float -> x+y}
+    var sub = {x:Float,y:Float -> x-y}
+    var mult = {x:Float,y:Float -> x*y}
+    var div = {x:Float,y:Float -> x/y}
+
     print("Enter an operator(+,-,*,/) : ")
     val choice = reader.next()!!
 
     val result: Float=when(choice){
-        "+" -> a + b
-        "-" -> a - b
-        "*" -> a * b
-        "/" -> a / b
+        "+" -> add(a,b)
+        "-" -> sub(a,b)
+        "*" -> mult(a,b)
+        "/" -> div(a,b)
 
         else -> 0.0f
     }
