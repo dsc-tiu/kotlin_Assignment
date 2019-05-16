@@ -8,20 +8,21 @@ fun main(){
     print("Enter an operator (+, -, *, /): ")
     val operator = reader.next()[0]
 
-    val result: Float
 
-    when (operator) {
-        '+' -> result = first + second
-        '-' -> result = first - second
-        '*' -> result = first * second
-        '/' -> result = first / second
+    val total={first:Float,second:Float, operator:Char->
+
+        when (operator) {
+        '+' ->  first + second
+        '-' ->  first - second
+        '*' ->  first * second
+        '/' ->  first / second
 
         else ->{
             println("Error! operator is not correct")
-            return
         }
     }
+    }
 
-    System.out.printf("%.1f %c %.1f = %.1f", first, operator, second, result)
+    System.out.printf("%.1f %c %.1f = %.1f", first, operator, second, total(first,second,operator))
 
 }
