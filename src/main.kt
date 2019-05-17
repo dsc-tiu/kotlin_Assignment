@@ -18,5 +18,11 @@ fun main(){
             else -> 0
         }
     }
+
+    //val c = a calculate b
     println("$a $choice $b = "+result(a,b,choice))
 }
+
+//infix fun Int.calculate(other:Int){
+//
+//}
